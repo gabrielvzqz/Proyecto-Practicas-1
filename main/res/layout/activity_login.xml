@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/username1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_marginTop="50dp"
+        android:inputType="textPassword"
+        android:layout_below="@+id/username1"/>
+    <ImageButton
+        android:id="@+id/btnShowPassword1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/password1"
+        android:layout_alignEnd="@id/password1"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_menu_view"/>
+
+    <Button
+        android:id="@+id/buttonsignin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signin"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/password1"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+</RelativeLayout>

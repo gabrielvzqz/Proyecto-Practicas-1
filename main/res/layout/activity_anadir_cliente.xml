@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".AnadirCliente">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Contact"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textSize="24dp"
+        android:layout_below="@+id/textTitle"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/empresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Empresa"
+        android:textSize="24dp"
+        android:layout_below="@+id/name"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefono"
+        android:textSize="24dp"
+        android:layout_below="@+id/empresa"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="Add Client"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/telefono"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+
+</RelativeLayout>
