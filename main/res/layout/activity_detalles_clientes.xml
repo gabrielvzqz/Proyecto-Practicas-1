@@ -17,49 +17,49 @@
         android:layout_marginBottom="30dp"/>
 
     <TextView
-        android:id="@+id/tvIDAdmin"
+        android:id="@+id/tvID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/tvNombreAdmin"
+        android:id="@+id/tvNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/tvEmpresaAdmin"
+        android:id="@+id/tvEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/tvTelefonoAdmin"
+        android:id="@+id/tvTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/tvDNILetraAdmin"
+        android:id="@+id/tvDNILetra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/tvComunidadAdmin"
+        android:id="@+id/tvComunidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/tvProvinciaAdmin"
+        android:id="@+id/tvProvincia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -71,43 +71,12 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnVolverAdmin"
+            android:id="@+id/btnVolver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver"
             android:layout_weight="1"
             android:layout_marginRight="8dp"
-            android:backgroundTint="@color/colorPrimaryDark" />
-
-        <Button
-            android:id="@+id/btnNuevaPantallaAdmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Productos"
-            android:layout_weight="1"
-            android:backgroundTint="@color/colorPrimaryDark" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnEliminar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Eliminar"
-            android:layout_weight="1"
-            android:layout_marginRight="8dp"
-            android:backgroundTint="@color/colorPrimaryDark" />
-
-        <Button
-            android:id="@+id/btnModificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Modificar"
-            android:layout_weight="1"
             android:backgroundTint="@color/colorPrimaryDark" />
 
     </LinearLayout>

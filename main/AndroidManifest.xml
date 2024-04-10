@@ -16,46 +16,64 @@
         android:theme="@style/Theme.EmpresaClientes"
         tools:targetApi="31">
         <activity
-            android:name=".AnadirCliente"
+            android:name=".Productos.Item"
             android:exported="false" />
         <activity
-            android:name=".ModificarCliente"
+            android:name=".User.SeleccionImagenUser"
             android:exported="false" />
         <activity
-            android:name=".DetailActivityAdmin"
+            android:name=".Clientes.DetallesClientes"
             android:exported="false" />
         <activity
-            android:name=".ListViewActivityAdmin"
-            android:exported="true" >
+            android:name=".Clientes.Clientes"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.SeleccionImagenAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AnadirCliente"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ModificarCliente"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.DetailActivityAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ListViewActivityAdmin"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.example.empresaclientes.ListViewActivityAdmin" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Productos"
+            android:name=".Productos.Productos"
             android:exported="false" />
         <activity
-            android:name=".DetailActivityUser"
+            android:name=".User.DetailActivityUser"
             android:exported="false" />
         <activity
-            android:name=".ListViewActivityUser"
-            android:exported="true" >
+            android:name=".User.ListViewActivityUser"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.example.empresaclientes.ListViewActivityUser" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" >
+            android:name=".LogIn.LoginActivity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".LogIn.MainActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -63,6 +81,7 @@
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

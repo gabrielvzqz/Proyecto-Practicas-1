@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -84,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:id="@+id/lblTelefonoAdmin"
@@ -106,6 +108,63 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginBottom="25dp">
+
+        <TextView
+            android:id="@+id/lblDNILetraAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DNI y Letra: "
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/etDNILetraAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DNI y Letra"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="25dp">
+
+        <Spinner
+            android:id="@+id/spinnerComunidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:spinnerItemStyle="@style/SpinnerItemStyle"
+            android:spinnerDropDownItemStyle="@style/SpinnerItemStyle" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <Spinner
+            android:id="@+id/spinnerProvincias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:spinnerItemStyle="@style/SpinnerItemStyle"
+            android:spinnerDropDownItemStyle="@style/SpinnerItemStyle" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginTop="16dp">
 
         <Button
@@ -116,12 +175,6 @@
             android:layout_weight="1"
             android:layout_marginRight="8dp"
             android:backgroundTint="@color/colorPrimaryDark" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/btnVolverListView"

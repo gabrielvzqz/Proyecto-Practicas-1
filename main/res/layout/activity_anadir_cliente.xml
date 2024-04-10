@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".AnadirCliente">
+    tools:context=".Admin.AnadirCliente">
 
     <TextView
         android:id="@+id/textTitle"
@@ -45,6 +45,38 @@
         android:layout_below="@+id/empresa"
         android:inputType="number"/>
 
+    <EditText
+        android:id="@+id/dni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DNI"
+        android:textSize="24dp"
+        android:layout_below="@+id/telefono"
+        android:layout_marginBottom="30dp"
+        android:inputType="text"/>
+
+    <Spinner
+        android:id="@+id/spinnerComunidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dni"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:spinnerItemStyle="@style/SpinnerItemStyle"
+        android:spinnerDropDownItemStyle="@style/SpinnerItemStyle" />
+
+    <Spinner
+        android:id="@+id/spinnerProvincias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerComunidades"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:spinnerItemStyle="@style/SpinnerItemStyle"
+        android:spinnerDropDownItemStyle="@style/SpinnerItemStyle" />
+
+
+
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
@@ -52,8 +84,7 @@
         android:textSize="24dp"
         android:text="Add Client"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/telefono"
+        android:layout_below="@+id/spinnerProvincias"
         android:backgroundTint="@color/colorPrimaryDark" />
-
 
 </RelativeLayout>
