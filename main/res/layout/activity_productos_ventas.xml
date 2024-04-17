@@ -5,46 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.appcompat.widget.Toolbar
-        android:padding="0dp"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_alignParentTop="true"
         android:layout_height="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="30dp"
         android:background="@color/ocean"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
         <LinearLayout
+            android:layout_marginStart="-20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <ImageButton
                 android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:src="@android:drawable/ic_media_previous" />
+                android:src="@android:drawable/ic_media_previous"
+                android:background="?android:attr/selectableItemBackground"/>
 
             <TextView
                 android:id="@+id/textTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:gravity="center"/>
 
             <ImageButton
                 android:id="@+id/btnSettings"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
-                android:background="?android:attr/selectableItemBackground"
-                android:src="@android:drawable/ic_menu_manage" />
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_manage"
+                android:background="?android:attr/selectableItemBackground"/>
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
@@ -59,25 +60,37 @@
         android:queryHint="Search product..."
         android:iconifiedByDefault="true"
         android:layout_marginTop="80dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="20dp"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/imageButtonToggleColumns" />
+        android:layout_below="@+id/imageButtonToggleColumns"
+        android:layout_marginTop="20dp" />
 
     <ImageButton
         android:id="@+id/imageButtonToggleColumns"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/tabla"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="20dp"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="20dp"
         android:backgroundTint="@color/oceanclarito"
-        android:layout_marginTop="80dp" />
+        android:src="@drawable/tabla" />
+
+    <ImageButton
+        android:id="@+id/imageListaDeLaCompra"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/carrito" />
 
 </RelativeLayout>

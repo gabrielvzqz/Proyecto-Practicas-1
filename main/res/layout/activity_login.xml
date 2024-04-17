@@ -5,23 +5,44 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    android:background="@drawable/iniciodesesion"
+    tools:context=".Menus.LoginActivity">
 
-    tools:context=".LogIn.LoginActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="70dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Sign In"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
 
     <EditText
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:backgroundTint="#212121"
+        android:textColorHint="#212121"
         android:id="@+id/username1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/username"
-        android:layout_marginTop="50dp"/>
+        android:hint="@string/username"/>
 
     <EditText
         android:id="@+id/password1"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:backgroundTint="#212121"
+        android:textColorHint="#212121"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:inputType="textPassword"
         android:layout_below="@+id/username1"/>
     <ImageButton
@@ -39,7 +60,10 @@
         android:layout_height="wrap_content"
         android:text="@string/signin"
         android:layout_marginTop="50dp"
+
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_below="@+id/password1"
-        android:backgroundTint="@color/colorPrimaryDark" />
+        android:backgroundTint="@color/black" />
 
 </RelativeLayout>

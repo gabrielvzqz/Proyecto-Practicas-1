@@ -3,26 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".LogIn.MainActivity">
+    android:background="@drawable/iniciodesesion"
+    tools:context=".Menus.MainActivity">
 
-    <EditText
-        android:id="@+id/username"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/username"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="70dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:id="@+id/username"
+        android:backgroundTint="#212121"
+        android:textColorHint="#212121"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"/>
 
     <EditText
         android:id="@+id/password"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
-        android:layout_marginTop="50dp"
+        android:backgroundTint="#212121"
+        android:textColorHint="#212121"
+        android:layout_marginTop="25dp"
         android:inputType="textPassword"
         android:layout_below="@+id/username"/>
+
     <ImageButton
         android:id="@+id/btnShowPassword"
         android:layout_width="40dp"
@@ -34,12 +55,17 @@
 
     <EditText
         android:id="@+id/repassword"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/repassword"
-        android:layout_marginTop="50dp"
+        android:backgroundTint="#212121"
+        android:textColorHint="#212121"
+        android:layout_marginTop="30dp"
         android:inputType="textPassword"
         android:layout_below="@+id/password"/>
+
     <ImageButton
         android:id="@+id/btnShowRePassword"
         android:layout_width="40dp"
@@ -48,22 +74,38 @@
         android:layout_alignEnd="@id/repassword"
         android:background="@android:color/transparent"
         android:src="@android:drawable/ic_menu_view"/>
-    <Button
-        android:id="@+id/buttonsignup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/repassword"
-        android:backgroundTint="@color/colorPrimaryDark" />
 
-    <Button
-        android:id="@+id/buttonsignin"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signin"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/buttonsignup"
-        android:backgroundTint="@color/colorPrimaryDark" />
+        android:layout_below="@+id/repassword"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginHorizontal="8dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonsignup"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/register"
+            android:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/buttonsignin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/signin"
+            android:backgroundTint="@color/black" />
+
+    </LinearLayout>
 
 </RelativeLayout>

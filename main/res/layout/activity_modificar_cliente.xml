@@ -5,19 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/oceanclarito">
 
-    <TextView
-        android:id="@+id/tvTituloAdmin"
+    <androidx.appcompat.widget.Toolbar
+        android:padding="0dp"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Datos del cliente"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:layout_alignParentTop="true"
+        android:layout_height="74dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/ocean"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@android:drawable/ic_media_previous" />
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Modify Contact"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@android:drawable/ic_menu_manage" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
+
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -27,6 +65,7 @@
             android:id="@+id/lblIDAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="ID: "
             android:textSize="18sp"/>
 
@@ -34,11 +73,15 @@
             android:id="@+id/textIDAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="18sp"/>
 
     </LinearLayout>
 
     <LinearLayout
+
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -48,19 +91,23 @@
             android:id="@+id/lblNombreAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre: "
+            android:textColor="@color/black"
+            android:text="Name: "
             android:textSize="18sp"/>
 
         <EditText
             android:id="@+id/etNombreAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nuevo Nombre"
+            android:textColor="@color/black"
+            android:hint="New name"
             android:textSize="18sp"/>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -70,19 +117,24 @@
             android:id="@+id/lblEmpresaAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Empresa: "
+            android:textColor="@color/black"
+            android:text="Company: "
             android:textSize="18sp"/>
 
         <EditText
             android:id="@+id/etEmpresaAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nueva Empresa"
+            android:textColor="@color/black"
+            android:hint="New company"
             android:textSize="18sp"/>
 
     </LinearLayout>
 
     <LinearLayout
+
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -92,19 +144,23 @@
             android:id="@+id/lblTelefonoAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Teléfono: "
+            android:textColor="@color/black"
+            android:text="Telephone: "
             android:textSize="18sp"/>
 
         <EditText
             android:id="@+id/etTelefonoAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nuevo Teléfono"
+            android:textColor="@color/black"
+            android:hint="New Telephone"
             android:textSize="18sp"/>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -114,19 +170,23 @@
             android:id="@+id/lblDNILetraAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DNI y Letra: "
+            android:textColor="@color/black"
+            android:text="DNI: "
             android:textSize="18sp"/>
 
         <EditText
             android:id="@+id/etDNILetraAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="DNI y Letra"
+            android:textColor="@color/black"
+            android:hint="DNI"
             android:textSize="18sp"/>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -145,6 +205,8 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -162,27 +224,21 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="16dp">
 
         <Button
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:id="@+id/btnModificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modificar"
+            android:text="Modify"
             android:layout_weight="1"
-            android:layout_marginRight="8dp"
-            android:backgroundTint="@color/colorPrimaryDark" />
-
-        <Button
-            android:id="@+id/btnVolverListView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Volver"
-            android:layout_weight="1"
-            android:layout_marginRight="8dp"
-            android:backgroundTint="@color/colorPrimaryDark" />
+            android:backgroundTint="@color/black" />
     </LinearLayout>
 </LinearLayout>

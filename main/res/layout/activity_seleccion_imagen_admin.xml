@@ -3,66 +3,116 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="@color/ocean"
     android:padding="16dp">
 
-    <ImageButton
-        android:id="@+id/imageButtonVentas"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/comprar"/>
-
-    <Button
-        android:id="@+id/buttonVentas"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#000000"
-        android:background="@android:color/transparent"
-        android:text="Ventas"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="120dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="35dp"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/imageButtonVentas"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/comprar"/>
+            <Button
+                android:id="@+id/buttonVentas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:text="Sales"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imageButtonProductos"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:scaleType="fitCenter"
-        android:src="@drawable/productos" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/imageButtonProductos"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/productos" />
+            <Button
+                android:id="@+id/buttonProductos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:text="Products"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonProductos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#000000"
-        android:background="@android:color/transparent"
-        android:text="Productos"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:textStyle="bold" />
+    </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imageButtonClientes"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:scaleType="fitCenter"
-        android:src="@drawable/clientescolor" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="60dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="35dp"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/imageButtonClientes"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/clientescolor" />
 
-    <Button
-        android:id="@+id/buttonClientes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#000000"
-        android:background="@android:color/transparent"
-        android:text="Clientes"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            <Button
+                android:id="@+id/buttonClientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:text="Customers"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imageButtonModificar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/modificar" />
+
+            <Button
+                android:id="@+id/buttonModificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:text="Modify"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

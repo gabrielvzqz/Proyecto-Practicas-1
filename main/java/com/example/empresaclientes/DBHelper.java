@@ -6,14 +6,20 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.empresaclientes.ProductosAdmin.Item;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBNAME = "EmpresaCliente.db"; // Cambio aquí el nombre de la base de datos
+    private Context context;
+
 
     public DBHelper(Context context) {
-        super(context, DBNAME, null, 1); // Uso DBNAME aquí
+        super(context, DBNAME, null, 2); // Uso DBNAME aquí
+        this.context = context;
     }
 
     @Override
@@ -22,6 +28,8 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("drop Table if exists Clientes");
         MyDB.execSQL("drop Table if exists Comunidades");
         MyDB.execSQL("drop Table if exists Provincias");
+        MyDB.execSQL("drop Table if exists Productos");
+        MyDB.execSQL("drop Table if exists Carrito");
 
         MyDB.execSQL("create Table users(username TEXT primary key, password TEXT not null)");
 
@@ -47,6 +55,25 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("INSERT INTO Comunidades(Nombre) VALUES('Ceuta')");
         MyDB.execSQL("INSERT INTO Comunidades(Nombre) VALUES('Melilla')");
 
+        MyDB.execSQL("create Table Carrito(ID Integer references Productos(ID), Nombre TEXT references Productos(Nombre), Precio Integer references Productos(Precio), Cantidad Integer references Productos(Cantidad), Foto TEXT references Productos(Foto))");
+
+        MyDB.execSQL("create Table Productos(ID Integer primary key not null unique, Nombre TEXT, Precio Integer, Cantidad Integer, Foto TEXT)");
+
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (1, 'Salmon', 200, 100, 'https://static.carrefour.es/hd_350x_/img_pim_food/283313_00_1.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (2, 'Dorada', 150, 100, 'https://www.pescaderiascorunesas.es/tienda-online/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/o/doradaedit.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (3, 'Langostinos', 300, 100, 'https://www.pescaderiaespe.com/wp-content/uploads/2022/03/Langostino-cocido.jpeg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (4, 'Camarones', 250, 100, 'https://www.pescadosaturnino.com/wp-content/uploads/2023/03/0049_camaron-cocido-1.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (5, 'Atún en lata', 100, 100, 'https://latastienda.com/wp-content/uploads/2022/06/ATUN-BLANCO-ALCACHOFA-DE-BRETANA.png');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (6, 'Sardinas en lata', 80, 100, 'https://disglobal.es/wp-content/uploads/2018/07/imagenes_4648398-621x577_464699ae.gif');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (7, 'Bacalao', 180, 100, 'https://pescadoacasa.com/wp-content/uploads/2018/03/bacalao-fresco-2kg-pescadoacasa.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (8, 'Calamares', 220, 100, 'https://www.peixacasa.cat/wp-content/uploads/2018/02/calamar-del-norte-peix-a-casa.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (9, 'Pulpo', 350, 100, 'https://p14.es/wp-content/uploads/2021/02/pulpo2.5kg.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (10, 'Trucha', 120, 100, 'https://www.pescadosaturnino.com/wp-content/uploads/2021/06/trucha-1.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (11, 'Anchoas en aceite', 100, 100, 'https://www.conservasnardin.com/105-large_default/anchoas-cantabrico-aceite-oliva-frasco-210g.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (12, 'Langosta', 180, 100, 'https://pescadoacasa.com/wp-content/uploads/2017/10/Marisco_de_Vigo-galeria-marisco-langosta-1466010168.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (13, 'Gambones', 210, 100, 'https://irun.market/wp-content/uploads/2023/10/Productos-15.jpeg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (14, 'Bogavante', 400, 100, 'https://mardamorosa.com/216-tm_large_default/bogavante-azul.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (15, 'Mero', 300, 100, 'https://www.pescaderiascorunesas.es/tienda-online/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/e/mero.jpg');");
 
         MyDB.execSQL("create Table Provincias(Nombre TEXT primary key, comunidad TEXT references Comunidades(Nombre))");
 
@@ -105,7 +132,6 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("INSERT INTO Provincias(Nombre, Comunidad) VALUES('Ceuta', 'Ceuta')");
         MyDB.execSQL("INSERT INTO Provincias(Nombre, Comunidad) VALUES('Melilla', 'Melilla')");
 
-
         MyDB.execSQL("create Table Clientes(ID Integer primary key not null unique, Nombre TEXT not null, Empresa TEXT not null, Telefono Integer not null unique, DNI_Letra TEXT not null unique, comunidad TEXT references Comunidades(Nombre), Provincia TEXT references Provincias(Nombre))");
 
         MyDB.execSQL("INSERT INTO Clientes(ID, Nombre, Empresa, Telefono, DNI_Letra, Comunidad, Provincia) VALUES(1, 'Juan Pérez', 'Restaurante A Costa', 669552883, '12345678Z', 'Madrid', 'Madrid')");
@@ -140,9 +166,9 @@ public class DBHelper extends SQLiteOpenHelper {
             String nombre = cursor.getString(1);
             String empresa = cursor.getString(2);
             String telefono = String.valueOf(cursor.getInt(3));
-            String dniLetra = cursor.getString(4); // Asumiendo que el DNI con letra está en la columna 4
-            String comunidad = cursor.getString(5); // Asumiendo que la provincia está en la columna 5
-            String provincia = cursor.getString(6); // Asumiendo que la ciudad está en la columna 6
+            String dniLetra = cursor.getString(4);
+            String comunidad = cursor.getString(5);
+            String provincia = cursor.getString(6);
 
             arrayList.add(id + ". " + nombre + " - " + empresa + " - " + telefono + " - " + dniLetra + " - " + comunidad + " - " + provincia);
         }
@@ -172,6 +198,9 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.execSQL("drop Table if exists Clientes");
         MyDB.execSQL("drop Table if exists Provincias");
         MyDB.execSQL("drop Table if exists Comunidades");
+        MyDB.execSQL("drop Table if exists Productos");
+        MyDB.execSQL("drop Table if exists Carrito");
+
         onCreate(MyDB);
     }
 
@@ -182,7 +211,6 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("Empresa", empresa);
         contentValues.put("Telefono", telefono);
         contentValues.put("DNI_Letra", dniLetra);
-
         contentValues.put("Comunidad", comunidad);
         contentValues.put("Provincia", provincia);
 
@@ -192,7 +220,19 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+    public boolean insertarProductoEnCarrito(String nombre, String precio, String cantidad, String foto) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Nombre", nombre);
+        contentValues.put("Precio", precio);
+        contentValues.put("Cantidad", cantidad);
+        contentValues.put("Foto", foto);
 
+        long resultado = db.insert("Carrito", null, contentValues);
+        db.close();
+
+        return resultado != -1;
+    }
     public boolean insertData(String username, String password) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -201,6 +241,10 @@ public class DBHelper extends SQLiteOpenHelper {
         long result = MyDB.insert("users", null, contentValues);
         if (result == -1) return false;
         else return true;
+    }
+    private int getResourceIdByName(String resourceName) {
+        Context context = this.context;
+        return context.getResources().getIdentifier(resourceName, "drawable", context.getPackageName());
     }
 
     public Boolean checkusername(String username) {
@@ -274,6 +318,33 @@ public class DBHelper extends SQLiteOpenHelper {
             ex.printStackTrace();
             return null;
         }
+    }
+
+    public List<Item> getAllProductos() {
+        List<Item> productList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String query = "SELECT * FROM Productos";
+        Cursor cursor = db.rawQuery(query, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                int id = cursor.getInt(0);
+                String nombre = cursor.getString(1);
+                int precio = cursor.getInt(2);
+                String cantidad = cursor.getString(3);
+                // Asumiendo que la columna "Foto" es una cadena con el nombre del recurso drawable
+                String foto = cursor.getString(4);
+
+                // Crear un nuevo Item y añadirlo a la lista
+                Item item = new Item(getResourceIdByName(foto), nombre, "Price: " + precio + "€", cantidad, foto, false);
+                productList.add(item);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return productList;
     }
 
 

@@ -5,50 +5,105 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    tools:context=".Admin.AnadirCliente">
+    android:background="@color/oceanclarito"
+    tools:context=".Modificar.AnadirCliente">
 
-    <TextView
-        android:id="@+id/textTitle"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="New Contact"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/ocean"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <LinearLayout
+            android:layout_marginStart="-20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_media_previous"
+                android:background="?android:attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Contact"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_manage"
+                android:background="?android:attr/selectableItemBackground"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
 
     <EditText
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/toolbar"
+        android:padding="10dp"
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="Name"
         android:textSize="24dp"
-        android:layout_below="@+id/textTitle"
         android:inputType="textPersonName"/>
 
     <EditText
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="10dp"
         android:id="@+id/empresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Empresa"
+        android:textColor="@color/black"
+        android:hint="Company"
         android:textSize="24dp"
         android:layout_below="@+id/name"
         android:inputType="textPersonName"/>
 
     <EditText
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="10dp"
         android:id="@+id/telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Telefono"
+        android:textColor="@color/black"
+        android:hint="Telephone"
         android:textSize="24dp"
         android:layout_below="@+id/empresa"
         android:inputType="number"/>
 
     <EditText
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="10dp"
         android:id="@+id/dni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="DNI"
         android:textSize="24dp"
         android:layout_below="@+id/telefono"
@@ -56,6 +111,9 @@
         android:inputType="text"/>
 
     <Spinner
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="10dp"
         android:id="@+id/spinnerComunidades"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,6 +124,9 @@
         android:spinnerDropDownItemStyle="@style/SpinnerItemStyle" />
 
     <Spinner
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:padding="10dp"
         android:id="@+id/spinnerProvincias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,13 +139,16 @@
 
 
     <Button
+        android:padding="10dp"
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:text="Add Client"
         android:layout_marginTop="30dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_below="@+id/spinnerProvincias"
-        android:backgroundTint="@color/colorPrimaryDark" />
+        android:backgroundTint="@color/black" />
 
 </RelativeLayout>

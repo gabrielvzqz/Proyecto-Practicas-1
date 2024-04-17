@@ -3,6 +3,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="@color/ocean"
     android:padding="16dp">
 
     <ImageButton
@@ -21,7 +22,7 @@
         android:layout_gravity="center"
         android:textColor="#000000"
         android:background="@android:color/transparent"
-        android:text="Ventas"
+        android:text="Sales"
         android:textSize="20sp"
         android:layout_marginBottom="15dp"
         android:textStyle="bold" />
@@ -41,7 +42,7 @@
         android:layout_gravity="center"
         android:textColor="#000000"
         android:background="@android:color/transparent"
-        android:text="Productos"
+        android:text="Products"
         android:textSize="20sp"
         android:layout_marginBottom="15dp"
         android:textStyle="bold" />
@@ -61,7 +62,7 @@
         android:layout_gravity="center"
         android:textColor="#000000"
         android:background="@android:color/transparent"
-        android:text="Clientes"
+        android:text="Customers"
         android:textSize="20sp"
         android:textStyle="bold" />
 

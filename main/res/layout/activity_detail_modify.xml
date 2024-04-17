@@ -53,7 +53,7 @@
     <TextView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/tvID"
+        android:id="@+id/tvIDAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -63,7 +63,7 @@
     <TextView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/tvNombre"
+        android:id="@+id/tvNombreAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -73,7 +73,7 @@
     <TextView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/tvEmpresa"
+        android:id="@+id/tvEmpresaAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -83,7 +83,7 @@
     <TextView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/tvTelefono"
+        android:id="@+id/tvTelefonoAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -93,7 +93,7 @@
     <TextView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/tvDNILetra"
+        android:id="@+id/tvDNILetraAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -103,7 +103,7 @@
     <TextView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/tvComunidad"
+        android:id="@+id/tvComunidadAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -113,11 +113,39 @@
     <TextView
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:id="@+id/tvProvincia"
+        android:id="@+id/tvProvinciaAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
+
+
+
+    <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Delete"
+            android:layout_marginRight="8dp"
+            android:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Modify"
+            android:backgroundTint="@color/black" />
+
+    </LinearLayout>
 
 </LinearLayout>

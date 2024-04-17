@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
     <!-- Permisos -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,34 +15,58 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmpresaClientes"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".Productos.Item"
+            android:name=".VentasUser.ListaDeLaCompraUser"
             android:exported="false" />
         <activity
-            android:name=".User.SeleccionImagenUser"
+            android:name=".VentasAdmin.ListaDeLaCompraAdmin"
             android:exported="false" />
         <activity
-            android:name=".Clientes.DetallesClientes"
+            android:name=".VentasAdmin.ProductosVentasAdmin"
             android:exported="false" />
         <activity
-            android:name=".Clientes.Clientes"
+            android:name=".ProductosAdmin.Item"
             android:exported="false" />
         <activity
-            android:name=".Admin.SeleccionImagenAdmin"
+            android:name=".ProductosAdmin.MyAdapter"
             android:exported="false" />
         <activity
-            android:name=".Admin.AnadirCliente"
+            android:name=".Menus.SeleccionImagenUser"
             android:exported="false" />
         <activity
-            android:name=".Admin.ModificarCliente"
+            android:name=".ClientesUser.DetallesClientesUser"
             android:exported="false" />
         <activity
-            android:name=".Admin.DetailActivityAdmin"
+            android:name=".ClientesUser.ClientesUser"
             android:exported="false" />
         <activity
-            android:name=".Admin.ListViewActivityAdmin"
-            android:exported="true">
+            android:name=".ClientesAdmin.ClientesAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".ClientesAdmin.DetallesClientesAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Menus.SeleccionImagenAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Modificar.AnadirCliente"
+            android:exported="false" />
+        <activity
+            android:name=".Modificar.ModificarCliente"
+            android:exported="false" />
+        <activity
+            android:name=".Direccion.Comunidad"
+            android:exported="false" />
+        <activity
+            android:name=".Direccion.Provincia"
+            android:exported="false" />
+        <activity
+            android:name=".Modificar.ModifyDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Modificar.ListViewActivityModify"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="com.example.empresaclientes.ListViewActivityAdmin" />
 
@@ -49,14 +74,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Productos.Productos"
+            android:name=".ProductosUser.ProductosUser"
             android:exported="false" />
         <activity
-            android:name=".User.DetailActivityUser"
+            android:name=".ProductosAdmin.ProductosAdmin"
             android:exported="false" />
         <activity
-            android:name=".User.ListViewActivityUser"
-            android:exported="true">
+            android:name=".VentasUser.ProductosVentasUser"
+            android:exported="false" />
+        <activity
+            android:name=".VentasUser.ListViewActivityVentasUser"
+            android:exported="false" />
+        <activity
+            android:name=".VentasAdmin.ListViewActivityVentasAdmin"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.example.empresaclientes.ListViewActivityUser" />
 
@@ -64,8 +95,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LogIn.LoginActivity"
-            android:exported="false">
+            android:name=".Menus.LoginActivity"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -73,12 +104,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LogIn.MainActivity"
+            android:name=".Menus.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Menus.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar">
+            android:theme="@style/Theme.Design.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
