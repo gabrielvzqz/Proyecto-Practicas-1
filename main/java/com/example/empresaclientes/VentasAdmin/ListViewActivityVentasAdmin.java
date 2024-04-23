@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.empresaclientes.DBHelper;
 import com.example.empresaclientes.Menus.SeleccionImagenAdmin;
-import com.example.empresaclientes.Menus.SeleccionImagenUser;
 import com.example.empresaclientes.R;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class ListViewActivityVentasAdmin extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view_ventas);
+        setContentView(R.layout.activity_list_view_ventas_admin);
 
         listView = findViewById(R.id.listView);
         searchView = findViewById(R.id.searchView);

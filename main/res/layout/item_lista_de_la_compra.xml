@@ -47,28 +47,26 @@
             android:id="@+id/imgRestar"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/menos"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:src="@drawable/menos" />
 
         <TextView
             android:id="@+id/textViewCantidad"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="0"
             android:textAlignment="center"
             android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/imgSumar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/mas"
-            android:layout_gravity="center"/>
-
+            android:layout_width="39dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mas" />
 
 
     </LinearLayout>
-
 </LinearLayout>

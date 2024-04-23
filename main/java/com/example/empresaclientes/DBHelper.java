@@ -59,21 +59,21 @@ public class DBHelper extends SQLiteOpenHelper {
 
         MyDB.execSQL("create Table Productos(ID Integer primary key not null unique, Nombre TEXT, Precio Integer, Cantidad Integer, Foto TEXT)");
 
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (1, 'Salmon', 200, 100, 'https://static.carrefour.es/hd_350x_/img_pim_food/283313_00_1.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (2, 'Dorada', 150, 100, 'https://www.pescaderiascorunesas.es/tienda-online/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/o/doradaedit.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (3, 'Langostinos', 300, 100, 'https://www.pescaderiaespe.com/wp-content/uploads/2022/03/Langostino-cocido.jpeg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (4, 'Camarones', 250, 100, 'https://www.pescadosaturnino.com/wp-content/uploads/2023/03/0049_camaron-cocido-1.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (5, 'Atún en lata', 100, 100, 'https://latastienda.com/wp-content/uploads/2022/06/ATUN-BLANCO-ALCACHOFA-DE-BRETANA.png');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (6, 'Sardinas en lata', 80, 100, 'https://disglobal.es/wp-content/uploads/2018/07/imagenes_4648398-621x577_464699ae.gif');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (7, 'Bacalao', 180, 100, 'https://pescadoacasa.com/wp-content/uploads/2018/03/bacalao-fresco-2kg-pescadoacasa.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (8, 'Calamares', 220, 100, 'https://www.peixacasa.cat/wp-content/uploads/2018/02/calamar-del-norte-peix-a-casa.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (9, 'Pulpo', 350, 100, 'https://p14.es/wp-content/uploads/2021/02/pulpo2.5kg.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (10, 'Trucha', 120, 100, 'https://www.pescadosaturnino.com/wp-content/uploads/2021/06/trucha-1.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (11, 'Anchoas en aceite', 100, 100, 'https://www.conservasnardin.com/105-large_default/anchoas-cantabrico-aceite-oliva-frasco-210g.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (12, 'Langosta', 180, 100, 'https://pescadoacasa.com/wp-content/uploads/2017/10/Marisco_de_Vigo-galeria-marisco-langosta-1466010168.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (13, 'Gambones', 210, 100, 'https://irun.market/wp-content/uploads/2023/10/Productos-15.jpeg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (14, 'Bogavante', 400, 100, 'https://mardamorosa.com/216-tm_large_default/bogavante-azul.jpg');");
-        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (15, 'Mero', 300, 100, 'https://www.pescaderiascorunesas.es/tienda-online/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/e/mero.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (1, 'Salmon', 34, 100, 'https://static.carrefour.es/hd_350x_/img_pim_food/283313_00_1.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (2, 'Dorada', 37, 100, 'https://www.pescaderiascorunesas.es/tienda-online/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/o/doradaedit.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (3, 'Langostinos', 40, 100, 'https://www.pescaderiaespe.com/wp-content/uploads/2022/03/Langostino-cocido.jpeg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (4, 'Camarones', 60, 100, 'https://www.pescadosaturnino.com/wp-content/uploads/2023/03/0049_camaron-cocido-1.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (5, 'Atún en lata', 15, 100, 'https://latastienda.com/wp-content/uploads/2022/06/ATUN-BLANCO-ALCACHOFA-DE-BRETANA.png');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (6, 'Sardinas en lata', 16, 100, 'https://disglobal.es/wp-content/uploads/2018/07/imagenes_4648398-621x577_464699ae.gif');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (7, 'Bacalao', 18, 100, 'https://pescadoacasa.com/wp-content/uploads/2018/03/bacalao-fresco-2kg-pescadoacasa.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (8, 'Calamares', 26, 100, 'https://www.peixacasa.cat/wp-content/uploads/2018/02/calamar-del-norte-peix-a-casa.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (9, 'Pulpo', 30, 100, 'https://p14.es/wp-content/uploads/2021/02/pulpo2.5kg.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (10, 'Trucha', 18, 100, 'https://www.pescadosaturnino.com/wp-content/uploads/2021/06/trucha-1.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (11, 'Anchoas en aceite', 30, 100, 'https://www.conservasnardin.com/105-large_default/anchoas-cantabrico-aceite-oliva-frasco-210g.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (12, 'Langosta', 70, 100, 'https://pescadoacasa.com/wp-content/uploads/2017/10/Marisco_de_Vigo-galeria-marisco-langosta-1466010168.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (13, 'Gambones', 10, 100, 'https://irun.market/wp-content/uploads/2023/10/Productos-15.jpeg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (14, 'Bogavante', 100, 100, 'https://mardamorosa.com/216-tm_large_default/bogavante-azul.jpg');");
+        MyDB.execSQL("INSERT INTO Productos (ID, Nombre, Precio, Cantidad, Foto) VALUES (15, 'Mero', 57, 100, 'https://www.pescaderiascorunesas.es/tienda-online/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/e/mero.jpg');");
 
         MyDB.execSQL("create Table Provincias(Nombre TEXT primary key, comunidad TEXT references Comunidades(Nombre))");
 

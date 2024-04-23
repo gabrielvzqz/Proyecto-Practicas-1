@@ -50,7 +50,7 @@ public class ProductosVentasAdmin extends AppCompatActivity {
         String nombre = getIntent().getStringExtra("Nombre");
         String empresa = getIntent().getStringExtra("Empresa");
         String telefono = getIntent().getStringExtra("Telefono");
-        String dniLetra = getIntent().getStringExtra("DNIyLetra");
+        String dniLetra = getIntent().getStringExtra("DNI_Letra");
         String comunidad = getIntent().getStringExtra("Comunidad");
         String provincia = getIntent().getStringExtra("Provincia");
         Cliente cliente = new Cliente(id, nombre, empresa, telefono, dniLetra, comunidad, provincia);

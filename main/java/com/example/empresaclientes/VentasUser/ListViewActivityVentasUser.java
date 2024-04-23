@@ -32,7 +32,7 @@ public class ListViewActivityVentasUser extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view_ventas);
+        setContentView(R.layout.activity_list_view_ventas_user);
 
         listView = findViewById(R.id.listView);
         searchView = findViewById(R.id.searchView);

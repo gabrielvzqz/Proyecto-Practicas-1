@@ -157,6 +157,11 @@ public class MyAdapterVentas extends RecyclerView.Adapter<MyAdapterVentas.ViewHo
             notifyDataSetChanged();
         }
     };
+    public void removeItem(int position) {
+        Item item = itemList.remove(position);
+        itemListFull.remove(item);
+        notifyDataSetChanged();
+    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageView;

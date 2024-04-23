@@ -1,16 +1,21 @@
 package com.example.empresaclientes.VentasAdmin;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.empresaclientes.Menus.SeleccionImagenAdmin;
 import com.example.empresaclientes.ProductosAdmin.Cliente;
 import com.example.empresaclientes.ProductosAdmin.Item;
 import com.example.empresaclientes.R;
@@ -37,8 +42,7 @@ public class ListaDeLaCompraAdmin extends AppCompatActivity {
         String nombre = cliente.getNombre();
         String empresa = cliente.getEmpresa();
 
-        textViewNombre.setText("Nombre: " + nombre);
-        textViewEmpresa.setText("Empresa: " + empresa);
+
         final double[][] total = {{0}};
         // Crear un ArrayAdapter personalizado para el ListView
         ArrayAdapter<Item> adapter = new ArrayAdapter<Item>(this, R.layout.item_lista_de_la_compra, R.id.textViewNombreProducto, selectedItems) {
@@ -111,10 +115,6 @@ public class ListaDeLaCompraAdmin extends AppCompatActivity {
 
         listViewProductos.setAdapter(adapter);
 
-        // Calcular y mostrar la suma de los precios
-        // ... (Código previo)
-
-
         for (Item item : selectedItems) {
             try {
                 // Suponiendo que el precio está en un formato que se puede convertir a double, por ejemplo, "200€"
@@ -128,5 +128,24 @@ public class ListaDeLaCompraAdmin extends AppCompatActivity {
         }
 
         textViewTotal.setText("Total: " + total[0][0] + "€");
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Volver a la actividad ListViewActivityAdmin
+                Intent intent = new Intent(ListaDeLaCompraAdmin.this, ListViewActivityVentasAdmin.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnFinalizarCompra = findViewById(R.id.btnFinalizarCompra);
+        btnFinalizarCompra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ListaDeLaCompraAdmin.this, "Purchased succesfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ListaDeLaCompraAdmin.this, SeleccionImagenAdmin.class);
+                startActivity(intent);
+            }
+        });
     }
 }
